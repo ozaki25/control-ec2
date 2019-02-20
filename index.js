@@ -18,9 +18,9 @@ app.get('/', (req, res) => {
   res.send('Hello');
 });
 
-app.get('/instances', (req, res) => {
-  const params = {};
-  ec2.describeInstances(params, function(err, data) {
+app.get('/status', (req, res) => {
+  const params = { IncludeAllInstances: true };
+  ec2.describeInstanceStatus(params, function(err, data) {
     if (err) {
       console.log('Error', err.stack);
       res.send(err.stack);
