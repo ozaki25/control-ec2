@@ -36,7 +36,7 @@ output = json
 yarn deploy
 ```
 
-### Confirm Lambda info
+### Check Lambda info
 
 ```bash
 yarn run info
