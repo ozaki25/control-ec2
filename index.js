@@ -69,9 +69,4 @@ app.post('/instances/stop', (req, res) => {
   });
 });
 
-const port = '8080';
-app.listen(port, () => {
-  console.log(`app start listening on port ${port}`);
-});
-
 module.exports.handler = serverless(app);
